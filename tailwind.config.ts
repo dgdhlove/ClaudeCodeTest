@@ -9,8 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        coral: {
+          DEFAULT: "#E8634A",
+          light: "#F0846E",
+          dark: "#C94D34",
+        },
+        surface: {
+          DEFAULT: "#FFFFFF",
+          muted: "#F8F8F8",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
       },
     },
   },
