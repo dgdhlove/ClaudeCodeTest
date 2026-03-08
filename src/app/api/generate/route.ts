@@ -3,6 +3,8 @@ import { getSupabase } from '@/lib/supabase'
 import { fetchPageContent } from '@/lib/fetchPageContent'
 import { generateProposal } from '@/lib/openrouter'
 
+export const maxDuration = 60
+
 const DEFAULT_PROMPT = `당신은 전문 비즈니스 제안서 작성 전문가입니다. 제공된 웹사이트 내용을 바탕으로 구조화된 한국어 비즈니스 제안서를 작성하세요. 다음 항목을 포함하세요: 요약, 문제 정의, 제안 솔루션, 가치 제안, 구현 일정, 예상 비용. 마크다운 형식(## 헤더 사용)으로 작성하고 전문적이고 간결하게 작성하세요.`
 
 export async function POST(req: NextRequest) {
